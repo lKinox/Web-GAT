@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #ff6c0e;
+  --color-brand-dark: #e05500;
+  --color-ink: #0e0e0e;
+  --color-coal: #1a1a1a;
+  --color-smoke: #f4f4f4;
+  --color-deep: #061417;
+
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-exo), var(--font-poppins), ui-sans-serif, sans-serif;
+
+  --animate-fade-up: fade-up 0.7s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+
+  ::selection {
+    @apply bg-brand text-white;
+  }
+}
+
+@layer components {
+  .container-gat {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  .title-display {
+    @apply font-display font-extrabold italic leading-[0.95] tracking-tight;
+  }
+
+  .btn-brand {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-brand px-6 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(255,108,14,0.7)] transition hover:-translate-y-0.5 hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:border-brand hover:text-brand;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.25em] text-brand;
+  }
+
+  .nav-link {
+    font-family: var(--font-avenir-book), sans-serif;
+    font-weight: 400;
+    font-synthesis: none;
+  }
+
+  .nav-link-active {
+    font-family: var(--font-avenir-heavy), sans-serif;
+    font-weight: 900;
+    font-synthesis: none;
+  }
+
+  .hero-title {
+    font-family: var(--font-podium), sans-serif;
+    font-style: italic;
+    font-weight: 650;
+    font-synthesis: none;
+    line-height: 0.95;
+  }
+
+  .category-strip-text {
+    font-family: var(--font-podium), sans-serif;
+    font-style: italic;
+    font-weight: 650;
+    font-synthesis: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
