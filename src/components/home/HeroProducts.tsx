@@ -32,7 +32,7 @@ export function HeroProducts() {
 
   return (
     <div
-      className="relative mt-8 h-80 sm:h-96 lg:h-[26rem]"
+      className="relative mt-8 h-52 sm:h-64 lg:h-72"
       aria-roledescription="carrusel"
       aria-label="Productos GAT"
     >
@@ -45,7 +45,7 @@ export function HeroProducts() {
           priority={position === 0}
           sizes="(min-width: 1024px) 36rem, 90vw"
           aria-hidden={position !== index}
-          className={`object-contain object-center drop-shadow-[0_25px_30px_rgba(0,0,0,0.6)] transition-opacity duration-700 ease-in-out ${
+          className={`object-contain object-left drop-shadow-[0_25px_30px_rgba(0,0,0,0.6)] transition-opacity duration-700 ease-in-out ${
             position === index ? "opacity-100" : "opacity-0"
           }`}
         />

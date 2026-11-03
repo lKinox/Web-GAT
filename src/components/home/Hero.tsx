@@ -23,7 +23,7 @@ export function Hero() {
         className="-z-20 hidden object-cover object-[right_center] md:block"
       />
 
-      <div className="container-gat grid items-end gap-6 pt-10 md:min-h-[830px] md:grid-cols-[1.1fr_1fr] md:pt-6">
+      <div className="container-gat grid items-end gap-6 pt-10 md:min-h-[680px] md:grid-cols-[1.1fr_1fr] md:pt-6">
         <div className="relative z-10 flex flex-col pb-8 md:pb-16">
           <p className="eyebrow animate-fade-up">Global Auto Tech</p>
           <h1 className="hero-title mt-4 animate-fade-up text-5xl tracking-tight sm:text-4xl xl:text-4xl [animation-delay:100ms]">
